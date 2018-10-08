@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.GodownEntry" table="godownentry"
+		schema="fertilizer">
+
+		<id name="PkGodownId" type="java.lang.Long" column="pkGodownId">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="godownName" type="java.lang.String" column="godownName"
+			not-null="true" length="128" />
+
+
+
+	</class>
+</hibernate-mapping>

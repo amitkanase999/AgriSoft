@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/fertilizer</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<!-- <property name="hibernate.validator.autoregister_listeners">false</property> 
+			<property name="hibernate.validator.apply_to_ddl">false</property> JDBC connection 
+			pool (use the built-in) -->
+
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<mapping resource="com/Fertilizer/hibernate/EmployeeDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CustomerDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/SupplierDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/TaxCreation.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/UserDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ProductDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CategoryDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/SupplierAccountDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/SupplierPayment.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CustomerPayment.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/EmployeePayment.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/MeasuringUnits.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/PurchaseOrder.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/GoodsReceive.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ItemStock.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/FertilizerBill.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ItemStockForSeedAndPesti.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/GodownEntry.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ExpenditureDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ExpenditurePayment.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/BarcodeDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ExpenseDetailForBillingAndGoodsReceive.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/Stock.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/seedPesticideBill.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CashBankBookDataDateWise.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/pesticideBill.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/SaleReturn.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/PurchaseReturn.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CreditNoteGeneration.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CreditLoanDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/CreditLoanPayment.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/FertilizerBillingCollection.hbm.xml" />	
+		<mapping resource="com/Fertilizer/hibernate/LoanPaymentDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/ProductStockDetails.hbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/SaveDailyStock.xml" />
+		<mapping resource="com/Fertilizer/hibernate/SupplierGrosshbm.xml" />
+		<mapping resource="com/Fertilizer/hibernate/wholesaleCustomerDetails.hbm.xml" />
+		
+		
+	</session-factory>
+
+</hibernate-configuration>

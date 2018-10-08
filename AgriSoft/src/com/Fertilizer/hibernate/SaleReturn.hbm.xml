@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.SaleReturnBean" table="sale_return"
+		schema="fertilizer">
+
+		<id name="pkSaleReturnId" type="java.lang.Long" column="pk_sale_return_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="fkCatId" type="java.lang.Long" column="cat_id"
+			length="20" />
+
+
+		<property name="fkFertilizerBillId" type="java.lang.Long"
+			column="fk_fertilizer_bill_id" length="20" />
+
+		<property name="fkSeedBillId" type="java.lang.Long" column="fk_seed_bill_id"
+			length="20" />
+
+		<property name="fkPesticideBillId" type="java.lang.Long"
+			column="fk_pesti_bill_id" length="20" />
+
+		<property name="aadhar" type="java.lang.Long" column="aadhar"
+			length="20" />
+
+
+		<property name="BillNo" type="java.lang.Long" column="bill_number"
+			length="20" />
+
+		<property name="productName" type="java.lang.String" column="product_name"
+			length="128" />
+
+		<property name="batchNumber" type="java.lang.String" column="batch_number"
+			length="128" />
+
+		<property name="customerName" type="java.lang.String" column="customer_name"
+			length="128" />
+
+		<property name="company" type="java.lang.String" column="company"
+			length="128" />
+
+		<property name="saleDate" type="java.lang.String" column="sale_date"
+			length="128" />
+
+		<property name="salePrice" type="java.lang.Double" column="sale_price"
+			length="20" />
+
+		<property name="weight" type="java.lang.Double" column="weight"
+			length="20" />
+
+		<property name="ReturnAmount" type="java.lang.Double" column="return_amount"
+			length="20" />
+
+		<property name="mrp" type="java.lang.Double" column="mrp"
+			length="20" />
+
+		<property name="taxPercentage" type="java.lang.Double"
+			column="tax_percenntage" length="20" />
+
+		<property name="availableQuantity" type="java.lang.Double"
+			column="availabe_quantity" length="20" />
+
+		<property name="returnQuantity" type="java.lang.Double"
+			column="return_quantity" length="20" />
+
+		<property name="returnDate" type="java.sql.Date" column="return_date" />
+
+	</class>
+</hibernate-mapping>

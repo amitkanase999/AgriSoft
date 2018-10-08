@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.CreditLoanPaymentBean" table="creditloan_payment"   
+		schema="fertilizer">
+
+		<id name="pk_loanpayment_id" type="java.lang.Long" column="pk_loan_payment">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="custname" type="java.lang.String" column="cust_name" />
+
+		<property name="paymentdate" type="java.util.Date" column="payment_date" />
+
+
+		<property name="loanno" type="java.lang.String" column="loannum" />
+
+		<property name="loanamt" type="java.lang.Double" column="loan_amt" />
+		
+		<property name="interestrate" type="java.lang.Double" column="interest_rate" /> 
+		
+		<property name="day" type="java.lang.Long" column="days" />
+		
+		<property name="interestamount" type="java.lang.Double" column="interest_amount" />
+		
+		<property name="totalamount" type="java.lang.Double" column="total_amount" />
+
+		<property name="ptype" type="java.lang.String" column="type" />
+
+		<property name="balance" type="java.lang.Double" column="balance" />
+
+		<property name="loanpaymentmode" type="java.lang.String" column="payment_mode" />
+
+		<property name="payamt" type="java.lang.Double" column="pay_amt" />
+
+		<property name="chequeno" type="java.lang.String" column="chequeno" />
+
+		<property name="nameoncheque" type="java.lang.String" column="nameoncheque" />
+
+		<property name="cardno" type="java.lang.String" column="cardno" />
+
+		<property name="accountno" type="java.lang.String" column="accountno" />
+		
+		<property name="bankname" type="java.lang.String" column="nameofbank" />
+	</class>
+</hibernate-mapping>

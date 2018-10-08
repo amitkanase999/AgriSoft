@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+				
+	<class name="com.Fertilizer.hibernate.ProductStockDetailsBean" table="Product_Stock_Details"
+		schema="fertilizer">
+
+		<id name="pk_stock_id" type="java.lang.Long" column="pk_stock_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="supplier_name" type="java.lang.String" column="supplier_name" />
+
+		<property name="godownName" type="java.lang.String" column="godown_name" />
+		
+		<property name="product_category" type="java.lang.String" column="product_category" />
+
+		<property name="product_name" type="java.lang.String" column="product_name" />
+
+	    <property name="quantity" type="java.lang.Long" column="quantity" /> 
+		
+		<property name="batchno" type="java.lang.String" column="batchno" />
+
+		<property name="expiryDate" type="java.util.Date" column="expiry_date" />
+		
+		<property name="updateDate" type="java.util.Date" column="UpdateDate" />
+		
+		<property name="packing" type="java.lang.Double" column="packing" /> 
+		
+		<property name="companyname" type="java.lang.String" column="company_name" />
+		
+		<property name="unitName" type="java.lang.String" column="unit" />
+
+		
+	</class>
+</hibernate-mapping>

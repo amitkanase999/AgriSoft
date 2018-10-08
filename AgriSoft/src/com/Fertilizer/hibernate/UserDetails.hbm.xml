@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.UserDetailsBean" table="user_details"
+		schema="fertilizer">
+
+		<id name="usrId" type="java.lang.Long" column="pk_user_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="firstName" type="java.lang.String" column="first_name"
+			not-null="true" length="128" />
+
+
+
+
+		<property name="lastName" type="java.lang.String" column="last_name"
+			not-null="true" length="128" />
+
+		<property name="address1" type="java.lang.String" column="address_line1"
+			not-null="true" length="128" />
+
+
+		<property name="userName" type="java.lang.String" column="user_name"
+			not-null="true" length="128" />
+
+
+		<property name="contactNo" type="java.lang.Long" column="mobile_no"
+			not-null="true" length="12" />
+
+
+		<property name="city" type="java.lang.String" column="city"
+			not-null="true" length="128" />
+
+		<property name="pan" type="java.lang.String" column="pan_no"
+			not-null="true" length="128" />
+
+		<property name="password" type="java.lang.String" column="password"
+			not-null="true" length="128" />
+
+		<property name="rePassword" type="java.lang.String" column="re_password"
+			length="128" />
+
+		<property name="typeId" type="java.lang.String" column="typeId"
+			length="255" />
+
+
+	</class>
+</hibernate-mapping>

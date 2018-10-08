@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+
+	<class name="com.Fertilizer.hibernate.SupplierGrossBean" table="supplier_gross"
+		schema="fertilizer">
+
+		<id name="pk_gross_id" type="java.lang.Long" column="pk_gross_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="fk_supplier_id" type="java.lang.Long" column="fk_supplier_id"
+			not-null="true" length="128" />
+
+		<property name="billno" type="java.lang.String" column="billno"
+			not-null="true" length="128" />
+
+
+		<property name="grosstotal" type="java.lang.Double" column="gross_total"
+			not-null="true" length="128" />
+
+	</class>
+</hibernate-mapping>

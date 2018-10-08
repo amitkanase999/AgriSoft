@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.FertilizerBillingCollectionBean" table="billing_collection"
+		schema="fertilizer">
+
+		<id name="pk_collection_id" type="java.lang.Long" column="pk_collection_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="customerName" type="java.lang.String" column="customer_name"/>
+
+		<property name="billno" type="java.lang.Long" column="bill_no" />
+
+		<property name="billdate" type="java.util.Date" column="bill_date"/>
+
+		<property name="grosstotal" type="java.lang.Double" column="gross_total"/>
+			
+		<property name="interestrate" type="java.lang.Double" column="interest_rate"/>
+	</class>
+</hibernate-mapping>

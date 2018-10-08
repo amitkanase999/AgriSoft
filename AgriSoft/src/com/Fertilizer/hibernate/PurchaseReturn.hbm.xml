@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.PurchaseReturnBean" table="purchase_return"
+		schema="fertilizer">
+
+		<id name="purchase_return_pk" type="java.lang.Long" column="purchase_return_pk">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="supplier_name" type="java.lang.String"
+			column="supplier_name" not-null="true" length="128" />
+
+		<property name="bill_no" type="java.lang.Long" column="bill_no"
+			not-null="true" length="128" />
+
+		<property name="product_name" type="java.lang.String" column="product_name"
+			not-null="true" length="128" />
+
+		<property name="category" type="java.lang.String" column="category"
+			not-null="true" length="128" />
+
+		<property name="batch_no" type="java.lang.String" column="batch_no"
+			not-null="true" length="128" />
+
+		<property name="packing" type="java.lang.Long" column="packing"
+			not-null="true" length="20" />
+
+		<property name="buy_price" type="java.lang.Double" column="buy_price"
+			not-null="true" length="20" />
+
+		<property name="sale_price" type="java.lang.Double" column="sale_price"
+			not-null="true" length="20">
+		</property>
+
+		<property name="MRP" type="java.lang.Double" column="MRP"
+			not-null="true" length="20">
+		</property>
+
+		<property name="tax_per" type="java.lang.Double" column="tax_per"
+			not-null="true" length="20">
+		</property>
+
+		<property name="quantity" type="java.lang.Long" column="quantity"
+			not-null="true" length="20">
+		</property>
+
+		<property name="retun_quantity" type="java.lang.Long" column="return_quantity"
+			not-null="true" length="20">
+		</property>
+
+		<property name="dc_no" type="java.lang.String" column="dc_no"
+			not-null="true" length="20">
+		</property>
+
+		<property name="barcode_no" type="java.lang.Long" column="barcode_no"
+			not-null="true" length="20">
+		</property>
+
+		<property name="purchase_date" type="java.util.Date" column="purchase_date"
+			length="20">
+		</property>
+
+		<property name="return_date" type="java.util.Date" column="return_date"
+			length="20">
+		</property>
+
+
+	</class>
+</hibernate-mapping>

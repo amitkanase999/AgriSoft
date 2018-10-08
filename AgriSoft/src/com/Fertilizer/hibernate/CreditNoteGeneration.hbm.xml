@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.helper.CreditNoteBean" table="CreditNoteGeneration"
+		schema="fertilizer">
+
+		<id name="pk_creditnote_id" type="java.lang.Long" column="pk_creditnote_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="partyname" type="java.lang.String" column="partyname" />
+
+		<property name="particular" type="java.lang.String" column="particular" />
+
+		<property name="amount" type="java.lang.Double" column="amount" />
+
+	</class>
+</hibernate-mapping>

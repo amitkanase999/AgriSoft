@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>  
+
+	<class name="com.Fertilizer.hibernate.LoanPaymentBean" table="LoanPaymentDetails"
+		schema="fertilizer">
+
+		<id name="pk_payment_id" type="java.lang.Long" column="pk_payment_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="custname" type="java.lang.String" column="cust_name" />
+
+		<property name="paydate" type="java.util.Date" column="payment_date" />
+
+		<property name="type" type="java.lang.String" column="type" />
+
+		<property name="paymentmode" type="java.lang.String" column="paymentmode" />
+
+		<property name="amount" type="java.lang.Double" column="amount" />
+		
+		<property name="chequeno" type="java.lang.String" column="chequeno" />
+
+		<property name="nameoncheque" type="java.lang.String" column="nameoncheque" />
+
+		<property name="cardno" type="java.lang.String" column="cardno" />
+
+		<property name="accountno" type="java.lang.String" column="accountno" />
+
+		<property name="bankname" type="java.lang.String" column="nameofbank" />
+
+	</class>
+</hibernate-mapping>

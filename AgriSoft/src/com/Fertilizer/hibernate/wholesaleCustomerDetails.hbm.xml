@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.WholesaleCustomerDetailsBean" table="wholesale_customer_details"
+		schema="fertilizer">
+
+		<id name="pk_shop_id" type="java.lang.Long" column="pk_shop_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="shopname" type="java.lang.String" column="shopname" />
+
+		<property name="address" type="java.lang.String" column="address" />
+
+		<property name="contactno" type="java.lang.Long" column="contactno"/>
+
+		<property name="emailid" type="java.lang.String" column="emailid"/>
+
+		<property name="gstno" type="java.lang.String" column="gstno"/>
+
+		<property name="adharno" type="java.lang.String" column="aadharno"/>
+
+		<property name="zipcode" type="java.lang.Long" column="zipcode" />
+
+
+	</class>
+</hibernate-mapping>

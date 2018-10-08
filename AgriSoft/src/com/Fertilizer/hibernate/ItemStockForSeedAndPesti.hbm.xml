@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.ItemStockForSeedAndPesti"
+		table="item_stockforpestiandseed">
+
+		<id name="pkItemStockId" type="java.lang.Long" column="pk_item_stock_id_forseed">
+
+			<generator class="increment" />
+		</id>
+
+
+
+		<property name="stock" type="java.lang.Long" column="stock"
+
+			length="19" />
+
+		<property name="batchNo" type="java.lang.String" column="batchNo"
+
+			length="19" />
+
+		<property name="fkProductId" type="java.lang.Long" column="fk_product_id"
+			insert="false" update="false" />
+
+		<property name="fkCatId" type="java.lang.Long" column="fk_cat_id"
+			insert="false" update="false" />
+
+		<property name="fkGodwonId" type="java.lang.Long" column="fk_godown_id"
+			insert="false" update="false" />
+
+		<many-to-one name="productDetailsBean"
+			class="com.Fertilizer.hibernate.ProductDetailsBean" not-null="true"
+			cascade="all">
+			<column name="fk_product_id" />
+		</many-to-one>
+		<many-to-one name="godownEntry" class="com.Fertilizer.hibernate.GodownEntry"
+			not-null="true" cascade="all">
+			<column name="fk_godown_id" />
+		</many-to-one>
+
+		<many-to-one name="categoryDetailsBean"
+			class="com.Fertilizer.hibernate.CategoryDetailsBean" not-null="true"
+			cascade="all">
+			<column name="fk_cat_id" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

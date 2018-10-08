@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.BarcodeDetailsBean" table="barcode_details"
+		schema="fertilizer">
+
+		<id name="pkBarcodeId" type="java.lang.Long" column="pk_barcode_details_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="barcodeNumber" type="java.lang.Long" column="barcode_number"
+			not-null="true" length="20" />
+
+
+		<property name="fkProductId" type="java.lang.Long" column="fk_product_id"
+			not-null="true" insert="false" update="false" length="20" />
+
+		<many-to-one name="productDetailsBean"
+			class="com.Fertilizer.hibernate.ProductDetailsBean" not-null="true"
+			cascade="all">
+			<column name="fk_product_id" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

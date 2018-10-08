@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.SeedPesticideBillBean"
+		table="seed_pesticide_billing" schema="fertilizer">
+
+		<id name="pkSeedPesticideBillId" type="java.lang.Long" column="pk_seed_pesticide_bill_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="catId" type="java.lang.Long" column="cat_id"
+			length="20" />
+
+		<property name="supplierId" type="java.lang.Long" column="supplier_id"
+			length="20" />
+
+		<property name="totalAfterSaleReturn" type="java.lang.Double"
+			column="total_after_sale_return" length="20" />
+
+		<property name="returnAmount" type="java.lang.Double" column="return_amount"
+			length="20" />
+
+		<property name="fkGoodsReceive" type="java.lang.Long" column="fk_goods_receive_id"
+			length="20" />
+
+		<property name="contact" type="java.lang.Long" column="contact_number"
+			length="20" />
+
+		<property name="aadhar" type="java.lang.Long" column="aadhar"
+			length="20" />
+
+		<property name="newSalePrice" type="java.lang.Double" column="salePriceWithoutTax" />
+
+		<property name="TaxAmount" type="java.lang.Double" column="Tax_Amount" />
+
+
+
+		<property name="billNo" type="java.lang.Long" column="bill_no"
+			length="20" />
+
+		<property name="barcode" type="java.lang.Long" column="barcode"
+			length="20" />
+
+		<property name="customerName" type="java.lang.String" column="customer_name"
+			length="128" />
+
+		<property name="village" type="java.lang.String" column="village"
+			length="128" />
+
+		<property name="transExpense" type="java.lang.Double" column="transportation_expense"
+			length="20" />
+
+		<property name="hamaliExpense" type="java.lang.Double"
+			column="hamali_expense" length="20" />
+
+		<property name="grossTotal" type="java.lang.Double" column="gross_total"
+			length="20" />
+
+		<property name="productName" type="java.lang.String" column="product_name"
+			length="128" />
+
+		<property name="company" type="java.lang.String" column="company"
+			length="128" />
+
+		<property name="hsn" type="java.lang.String" column="hsn" />
+
+		<property name="salePrice" type="java.lang.Double" column="sale_price"
+			length="20" />
+
+		<property name="iGst" type="java.lang.Double" column="igstPercentage" />
+
+		<property name="weight" type="java.lang.Double" column="weight"
+			length="20" />
+
+		<property name="total" type="java.lang.Double" column="total_all_product"
+			length="20" />
+
+		<property name="totalInGrid" type="java.lang.Double" column="total_per_product"
+			length="20" />
+
+		<property name="mrp" type="java.lang.Double" column="mrp"
+			length="20" />
+
+		<property name="quantity" type="java.lang.Long" column="quantity"
+			length="20" />
+
+		<property name="quantityAfterReturn" type="java.lang.Long"
+			column="quantity_after_return" length="20" />
+
+		<property name="returnQuantity" type="java.lang.Long" column="return_quantity"
+			length="20" />
+		<!-- <property name="expireDate" type="java.sql.Date" column="expiry_date" 
+			/> <property name="batchNo" type="java.lang.String" column="batch_no" length="20"/> -->
+		<property name="insertDate" type="java.sql.Date" column="insert_date" />
+
+		<property name="fkCreditCustomerId" type="java.lang.Long"
+			column="fk_customer_id" length="20" />
+
+		<property name="customerHiddenName" type="java.lang.String"
+			column="credit_customer_name" length="128" />
+
+
+		<property name="cardNo" type="java.lang.Long" column="card_number"
+			length="128" />
+
+		<property name="accNo" type="java.lang.String" column="account_number"
+			length="128" />
+
+
+
+		<property name="paymentMode" type="java.lang.String" column="payment_mode"
+			length="128" />
+
+		<!-- <property name="customerNameHidden" type="java.lang.String" column="credit_customer_hidden_name" 
+			/> -->
+
+		<property name="checkNo" type="java.lang.String" column="check_number"
+			length="128" />
+
+
+		<property name="nameOnCheck" type="java.lang.String" column="name_on_check"
+			length="128" />
+
+
+		<property name="bankName" type="java.lang.String" column="bank_name"
+			length="128" />
+
+
+		<property name="taxPercentage" type="java.lang.Double"
+			column="tax_percentage" length="10" />
+
+		<property name="expiryDate" type="java.lang.String" column="expiry_date"
+			length="128" />
+
+		<property name="batchNumber" type="java.lang.String" column="batch_number"
+			length="128" />
+			
+		<property name="seedBalance_status" type="java.lang.Double" column="seed_balance_status"
+			length="128" />
+			
+		<property name="CustName" type="java.lang.String" column="Cust_Name" />
+		
+		<property name="unit" type="java.lang.String" column="unit" />
+		
+		<property name="customertype" type="java.lang.String" column="customer_type" />
+		
+		<property name="payCustType" type="java.lang.String" column="PayCustType" />
+			
+
+	</class>
+</hibernate-mapping>

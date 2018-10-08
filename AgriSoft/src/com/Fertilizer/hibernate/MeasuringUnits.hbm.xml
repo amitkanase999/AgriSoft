@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.MeasuringUnitsBean" table="sold_units"
+		schema="fertilizer">
+
+		<id name="pkUnitId" type="java.lang.Long" column="pk_unit_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="unitName" type="java.lang.String" column="unit_name"
+			length="20" />
+
+		<property name="unitDescription" type="java.lang.String"
+			column="unit_description" length="128" />
+
+		<property name="insertDate" type="java.sql.Date" column="insert_date"
+			not-null="true" length="10" />
+
+	</class>
+</hibernate-mapping>

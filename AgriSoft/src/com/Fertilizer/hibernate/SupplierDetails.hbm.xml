@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.SupplierDetailsBean" table="supplier_details"
+		schema="fertilizer">
+
+		<id name="supId" type="java.lang.Long" column="pk_supplier_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="dealerName" type="java.lang.String" column="supplier_name"
+			not-null="true" length="128" />
+
+		<property name="personName" type="java.lang.String" column="contact_person_name"
+			not-null="true" length="128" />
+
+		<property name="address" type="java.lang.String" column="address"
+			not-null="true" length="128" />
+
+		<property name="city" type="java.lang.String" column="city"
+			not-null="true" length="128" />
+
+		<property name="emailId" type="java.lang.String" column="email_id"
+			not-null="true" length="128" />
+
+		<property name="contactNo" type="java.lang.Long" column="contact_no"
+			not-null="true" length="20" />
+
+		<property name="landline" type="java.lang.Long" column="alternate_no"
+			not-null="true" length="20" />
+
+		<property name="gstNum" type="java.lang.String" column="tin_no"
+			not-null="true" length="20">
+		</property>
+
+	</class>
+</hibernate-mapping>

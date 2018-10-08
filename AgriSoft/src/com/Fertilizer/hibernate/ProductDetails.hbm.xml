@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.ProductDetailsBean" table="product_details"
+		schema="fertilizer">
+
+		<id name="prodctId" type="java.lang.Long" column="pk_product_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="fk_cat_id" type="java.lang.Long" column="fk_cat_id"
+			not-null="true" update="false" insert="false" length="20" />
+
+		<property name="fkTaxId" type="java.lang.Long" column="fk_tax_id"
+			not-null="true" length="20" />
+
+		<property name="taxPercentage" type="java.lang.Double"
+			column="tax_percentage" not-null="true" length="10" />
+
+		<property name="mrp" type="java.lang.Double" column="mrp"
+			not-null="true" length="10" />
+
+		<!-- <property name="fk_supplier_id" type="java.lang.Long" column="fk_supplier_id" 
+			not-null="true" update="false" insert="false" length="20"/> -->
+
+		<property name="fk_unit_id" type="java.lang.Long" column="fk_unit_id"
+			not-null="true" update="true" insert="true" length="20" />
+
+
+		<property name="productName" type="java.lang.String" column="product_name"
+			not-null="true" length="128" />
+
+		<property name="hsn" type="java.lang.String" column="hsn"
+			length="128" />
+
+
+		<property name="manufacturingCompany" type="java.lang.String"
+			column="manufacturing_company" not-null="true" length="128" />
+
+
+
+
+		<property name="buyPrice" type="java.lang.Double" column="buy_price"
+			not-null="true" length="10" />
+
+		<property name="salePrice" type="java.lang.Double" column="sale_price"
+			not-null="true" length="10" />
+
+		<property name="creditSalePrice" type="java.lang.Double"
+			column="credit_customer_sale_price" not-null="true" length="10" />
+
+		<property name="weight" type="java.lang.Double" column="weight"
+			not-null="true" length="10" />
+
+		<property name="status" type="java.lang.Long" column="status"
+			not-null="true" length="10" />
+
+		<property name="insertDate" type="java.sql.Date" column="insert_date" />
+
+
+		<!-- ORM Mapping -->
+
+
+
+		<!--  <many-to-one name="MeasuringUnitsBean"
+			class="com.Fertilizer.hibernate.MeasuringUnitsBean" not-null="true"
+			cascade="all">
+			<column name="fk_unit_id" />
+		</many-to-one>   -->
+
+		<many-to-one name="CategoryDetailsBean"
+			class="com.Fertilizer.hibernate.CategoryDetailsBean" not-null="true"
+			cascade="all">
+			<column name="fk_cat_id" />
+		</many-to-one>
+
+		
+
+	</class>
+</hibernate-mapping>

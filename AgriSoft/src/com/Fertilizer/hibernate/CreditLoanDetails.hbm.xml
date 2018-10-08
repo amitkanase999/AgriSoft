@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.CreditLoanBean" table="credit_loan"
+		schema="fertilizer">
+
+		<id name="pk_loan_id" type="java.lang.Long" column="pk_loan_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="Loanno" type="java.lang.String" column="loan_no" />
+
+		<property name="cust_name" type="java.lang.String" column="customer_name" />
+
+		<property name="type" type="java.lang.String" column="type" />
+
+		<property name="payment_mode" type="java.lang.String" column="payment_mode" />
+
+		<property name="loan_date" type="java.util.Date" column="loan_date" />
+
+		<!-- <property name="interest_rate" type="java.lang.Double"
+			column="interest_rate" /> -->
+
+		<property name="loan_amt" type="java.lang.Double" column="loan_amount" />
+
+		<property name="chequeno" type="java.lang.String" column="cheque_no" />
+
+		<property name="nameoncheque" type="java.lang.String" column="name_on_cheque" />
+
+		<property name="cardno" type="java.lang.String" column="card_no" />
+
+		<property name="accountno" type="java.lang.String" column="account_no" />
+
+		<property name="bankname" type="java.lang.String" column="bank_name" />
+		
+		<property name="balance_status" type="java.lang.Double" column="balance_status" />
+		
+		<property name="paid_date" type="java.util.Date" column="paid_date" />
+	</class>
+</hibernate-mapping>
